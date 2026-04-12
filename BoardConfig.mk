@@ -230,11 +230,13 @@ TARGET_SYSTEM_PROP           += $(DEVICE_PATH)/system.prop
 #   TW_BRIGHTNESS_PATH confirmed from /sys/class/backlight/panel0-backlight
 #   TW_MAX_BRIGHTNESS=4094 (standard for Xiaomi OLED)
 # ─────────────────────────────────────────────────────────
+
+RECOVERY_BGRA := true
 TARGET_USES_VULKAN       := true
 TW_THEME                 := portrait_hdpi
 TW_FRAMERATE             := 120
 TW_BRIGHTNESS_PATH       := "/sys/class/backlight/panel0-backlight/brightness"
-TW_DEFAULT_BRIGHTNESS    := 1200
+TW_DEFAULT_BRIGHTNESS    := 200
 TW_MAX_BRIGHTNESS        := 4094
 TW_NO_SCREEN_BLANK  := true
 TW_SCREEN_BLANK_ON_BOOT  := true
