@@ -6,7 +6,7 @@ on:
       DEVICE_TREE_URL:
         description: "Device tree URL"
         required: true
-        default: "https://github.com/hackpupg001-a11y/android_device_xiaomi_myron"
+        default: "https://github.com/wsssyl9/android_device_xiaomi_myron"
       DEVICE_TREE_BRANCH:
         description: "Device tree branch"
         required: true
