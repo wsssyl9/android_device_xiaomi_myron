@@ -200,6 +200,13 @@ jobs:
           lunch 2>&1 | grep "twrp_" | head -20 || true
           exit 1
         fi
+                # 修复 OrangeFox 编译 odm 软链接冲突
+        rm -rf out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/odm/bin
+        rm -rf out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/odm/etc
+        rm -rf out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery/root/odm/lib64
+        # 全清旧编译残留，避免增量编译报错
+        make clean && make clobber
+
 
         # Progress monitor
         (while true; do

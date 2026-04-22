@@ -1,15 +1,5 @@
 name: OrangeFox 14.1 — Xiaomi myron (SM8850)
 
-# 编译前第一步，先强制全量清理所有旧产物缓存（解决非空目录残留）
-make clobber
-rm -rf out/
-
-# OrangeFox odm冲突专属全局环境变量
-export FOX_SKIP_ODM_RAMDISK_INTEGRATION=1
-export TARGET_RECOVERY_EXCLUDE_ODM=true
-export ALLOW_MISSING_DEPENDENCIES=true
-
-
 
 on:
 
