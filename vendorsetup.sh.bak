@@ -23,10 +23,6 @@
 # Branch: OrangeFox 14.1
 
 export LC_ALL="C"
-# 编译前全局导出
-export FOX_SKIP_ODM_RAMDISK_INTEGRATION=1
-export ALLOW_MISSING_DEPENDENCIES=true
-
 
 # ─── A/B with dedicated recovery partition ────────────────────────────────────
 export FOX_AB_DEVICE=1
