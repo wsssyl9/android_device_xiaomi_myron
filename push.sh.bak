@@ -1,0 +1,3 @@
+sh git add .
+sh git commit -m "update device tree myron"
+sh git push
