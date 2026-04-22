@@ -1,4 +1,9 @@
 #!/bin/bash
+# OrangeFox odm冲突全局屏蔽变量（必须写在shell脚本，绝对不能写BoardConfig.mk）
+export FOX_SKIP_ODM_RAMDISK_INTEGRATION=1
+export FOX_SKIP_VENDOR_SYMLINK_GENERATION=1
+export ALLOW_MISSING_DEPENDENCIES=true
+
 #
 #	This file is part of the OrangeFox Recovery Project
 # 	Copyright (C) 2020-2026 The OrangeFox Recovery Project
@@ -23,10 +28,6 @@
 # Branch: OrangeFox 14.1
 
 export LC_ALL="C"
-# 编译前全局导出
-export FOX_SKIP_ODM_RAMDISK_INTEGRATION=1
-export ALLOW_MISSING_DEPENDENCIES=true
-
 
 # ─── A/B with dedicated recovery partition ────────────────────────────────────
 export FOX_AB_DEVICE=1

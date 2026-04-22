@@ -341,13 +341,3 @@ TW_DEVICE_VERSION     := POCO_F8_Ultra
 # Confirmed: ro.product.first_api_level=35, ro.board.first_api_level=35 (getprop)
 # fox_14.1 builds against SDK 34 AOSP base — BOARD_SYSTEMSDK_VERSIONS=34
 BOARD_SYSTEMSDK_VERSIONS := 34
-
-
-
-# BoardConfig.mk 专属配置，仅保留以下
-# 从构建源头排除odm全部分区打包
-TARGET_RECOVERY_EXCLUDE_ODM := true
-# 清空全部根目录额外软链接生成
-BOARD_ROOT_EXTRA_SYMLINKS :=
-# Recovery构建排除odm/vendor_dlkm分区挂载集成
-BOARD_RECOVERY_EXCLUDE_PARTITIONS += odm vendor_dlkm
